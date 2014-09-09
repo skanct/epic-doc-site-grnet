@@ -1,0 +1,2874 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="NONE,NOARCHIVE" />
+  <title>Sequel::DatabaseError at &#x2F;handles&#x2F;11239&#x2F;</title>
+  <style type="text/css">
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font:small sans-serif; }
+    body>div { border-bottom:1px solid #ddd; }
+    h1 { font-weight:normal; }
+    h2 { margin-bottom:.8em; }
+    h2 span { font-size:80%; color:#666; font-weight:normal; }
+    h3 { margin:1em 0 .5em 0; }
+    h4 { margin:0 0 .5em 0; font-weight: normal; }
+    table {
+        border:1px solid #ccc; border-collapse: collapse; background:white; }
+    tbody td, tbody th { vertical-align:top; padding:2px 3px; }
+    thead th {
+        padding:1px 6px 1px 3px; background:#fefefe; text-align:left;
+        font-weight:normal; font-size:11px; border:1px solid #ddd; }
+    tbody th { text-align:right; color:#666; padding-right:.5em; }
+    table.vars { margin:5px 0 2px 40px; }
+    table.vars td, table.req td { font-family:monospace; }
+    table td.code { width:100%;}
+    table td.code div { overflow:hidden; }
+    table.source th { color:#666; }
+    table.source td {
+        font-family:monospace; white-space:pre; border-bottom:1px solid #eee; }
+    ul.traceback { list-style-type:none; }
+    ul.traceback li.frame { margin-bottom:1em; }
+    div.context { margin: 10px 0; }
+    div.context ol {
+        padding-left:30px; margin:0 10px; list-style-position: inside; }
+    div.context ol li {
+        font-family:monospace; white-space:pre; color:#666; cursor:pointer; }
+    div.context ol.context-line li { color:black; background-color:#ccc; }
+    div.context ol.context-line li span { float: right; }
+    div.commands { margin-left: 40px; }
+    div.commands a { color:black; text-decoration:none; }
+    #summary { background: #ffc; }
+    #summary h2 { font-weight: normal; color: #666; }
+    #summary ul#quicklinks { list-style-type: none; margin-bottom: 2em; }
+    #summary ul#quicklinks li { float: left; padding: 0 1em; }
+    #summary ul#quicklinks>li+li { border-left: 1px #666 solid; }
+    #explanation { background:#eee; }
+    #template, #template-not-exist { background:#f6f6f6; }
+    #template-not-exist ul { margin: 0 0 0 20px; }
+    #traceback { background:#eee; }
+    #requestinfo { background:#f6f6f6; padding-left:120px; }
+    #summary table { border:none; background:transparent; }
+    #requestinfo h2, #requestinfo h3 { position:relative; margin-left:-100px; }
+    #requestinfo h3 { margin-bottom:-1em; }
+    .error { background: #ffc; }
+    .specific { color:#cc3300; font-weight:bold; }
+  </style>
+  <script type="text/javascript">
+  //<!--
+    function getElementsByClassName(oElm, strTagName, strClassName){
+        // Written by Jonathan Snook, http://www.snook.ca/jon;
+        // Add-ons by Robert Nyman, http://www.robertnyman.com
+        var arrElements = (strTagName == "*" && document.all)? document.all :
+        oElm.getElementsByTagName(strTagName);
+        var arrReturnElements = new Array();
+        strClassName = strClassName.replace(/\-/g, "\\-");
+        var oRegExp = new RegExp("(^|\\s)" + strClassName + "(\\s|$$)");
+        var oElement;
+        for(var i=0; i<arrElements.length; i++){
+            oElement = arrElements[i];
+            if(oRegExp.test(oElement.className)){
+                arrReturnElements.push(oElement);
+            }
+        }
+        return (arrReturnElements)
+    }
+    function hideAll(elems) {
+      for (var e = 0; e < elems.length; e++) {
+        elems[e].style.display = 'none';
+      }
+    }
+    window.onload = function() {
+      hideAll(getElementsByClassName(document, 'table', 'vars'));
+      hideAll(getElementsByClassName(document, 'ol', 'pre-context'));
+      hideAll(getElementsByClassName(document, 'ol', 'post-context'));
+    }
+    function toggle() {
+      for (var i = 0; i < arguments.length; i++) {
+        var e = document.getElementById(arguments[i]);
+        if (e) {
+          e.style.display = e.style.display == 'none' ? 'block' : 'none';
+        }
+      }
+      return false;
+    }
+    function varToggle(link, id) {
+      toggle('v' + id);
+      var s = link.getElementsByTagName('span')[0];
+      var uarr = String.fromCharCode(0x25b6);
+      var darr = String.fromCharCode(0x25bc);
+      s.innerHTML = s.innerHTML == uarr ? darr : uarr;
+      return false;
+    }
+    //-->
+  </script>
+</head>
+<body>
+
+<div id="summary">
+  <h1>Sequel::DatabaseError at &#x2F;handles&#x2F;11239&#x2F;</h1>
+  <h2>NativeException: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table &#x27;hdl.pidsequence&#x27; doesn&#x27;t exist</h2>
+  <table><tr>
+    <th>Ruby</th>
+    <td>
+
+      <code>sun&#x2F;reflect&#x2F;NativeConstructorAccessorImpl.java</code>: in <code>newInstance</code>, line 57
+
+    </td>
+  </tr><tr>
+    <th>Web</th>
+    <td><code>POST epic.grnet.gr&#x2F;handles&#x2F;11239&#x2F;</code></td>
+  </tr></table>
+
+  <h3>Jump to:</h3>
+  <ul id="quicklinks">
+    <li><a href="#get-info">GET</a></li>
+    <li><a href="#post-info">POST</a></li>
+    <li><a href="#cookie-info">Cookies</a></li>
+    <li><a href="#env-info">ENV</a></li>
+  </ul>
+</div>
+
+<div id="traceback">
+  <h2>Traceback <span>(innermost first)</span></h2>
+  <ul class="traceback">
+
+      <li class="frame">
+        <code>sun&#x2F;reflect&#x2F;NativeConstructorAccessorImpl.java</code>: in <code>newInstance</code>
+
+          
+      </li>
+
+      <li class="frame">
+        <code>sun&#x2F;reflect&#x2F;DelegatingConstructorAccessorImpl.java</code>: in <code>newInstance</code>
+
+          
+      </li>
+
+      <li class="frame">
+        <code>java&#x2F;lang&#x2F;reflect&#x2F;Constructor.java</code>: in <code>newInstance</code>
+
+          
+      </li>
+
+      <li class="frame">
+        <code>com&#x2F;mysql&#x2F;jdbc&#x2F;Util.java</code>: in <code>handleNewInstance</code>
+
+          
+      </li>
+
+      <li class="frame">
+        <code>com&#x2F;mysql&#x2F;jdbc&#x2F;Util.java</code>: in <code>getInstance</code>
+
+          
+      </li>
+
+      <li class="frame">
+        <code>com&#x2F;mysql&#x2F;jdbc&#x2F;SQLError.java</code>: in <code>createSQLException</code>
+
+          
+      </li>
+
+      <li class="frame">
+        <code>com&#x2F;mysql&#x2F;jdbc&#x2F;MysqlIO.java</code>: in <code>checkErrorPacket</code>
+
+          
+      </li>
+
+      <li class="frame">
+        <code>com&#x2F;mysql&#x2F;jdbc&#x2F;MysqlIO.java</code>: in <code>checkErrorPacket</code>
+
+          
+      </li>
+
+      <li class="frame">
+        <code>com&#x2F;mysql&#x2F;jdbc&#x2F;MysqlIO.java</code>: in <code>sendCommand</code>
+
+          
+      </li>
+
+      <li class="frame">
+        <code>com&#x2F;mysql&#x2F;jdbc&#x2F;MysqlIO.java</code>: in <code>sqlQueryDirect</code>
+
+          
+      </li>
+
+      <li class="frame">
+        <code>com&#x2F;mysql&#x2F;jdbc&#x2F;ConnectionImpl.java</code>: in <code>execSQL</code>
+
+          
+      </li>
+
+      <li class="frame">
+        <code>com&#x2F;mysql&#x2F;jdbc&#x2F;StatementImpl.java</code>: in <code>executeUpdate</code>
+
+          
+      </li>
+
+      <li class="frame">
+        <code>com&#x2F;mysql&#x2F;jdbc&#x2F;StatementImpl.java</code>: in <code>executeUpdate</code>
+
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;sequel-4.4.0&#x2F;lib&#x2F;sequel&#x2F;adapters&#x2F;jdbc&#x2F;mysql.rb</code>: in <code>execute_statement_insert</code>
+
+          
+          <div class="context" id="c2186">
+              
+              <ol start="47" class="pre-context" id="pre2186">
+                
+                <li onclick="toggle('pre2186', 'post2186')">            end
+</li>
+                
+                <li onclick="toggle('pre2186', 'post2186')">          end
+</li>
+                
+                <li onclick="toggle('pre2186', 'post2186')">        end
+</li>
+                
+                <li onclick="toggle('pre2186', 'post2186')">
+</li>
+                
+                <li onclick="toggle('pre2186', 'post2186')">        # MySQL 5.1.12 JDBC adapter requires generated keys
+</li>
+                
+                <li onclick="toggle('pre2186', 'post2186')">        # and previous versions don&#x27;t mind.
+</li>
+                
+                <li onclick="toggle('pre2186', 'post2186')">        def execute_statement_insert(stmt, sql)
+</li>
+                
+              </ol>
+              
+
+            <ol start="54" class="context-line">
+              <li onclick="toggle('pre2186', 'post2186')">          stmt.executeUpdate(sql, JavaSQL::Statement.RETURN_GENERATED_KEYS)<span>...</span></li></ol>
+
+              
+              <ol start='55' class="post-context" id="post2186">
+                
+                <li onclick="toggle('pre2186', 'post2186')">        end
+</li>
+                
+                <li onclick="toggle('pre2186', 'post2186')">
+</li>
+                
+                <li onclick="toggle('pre2186', 'post2186')">        # Return generated keys for insert statements.
+</li>
+                
+                <li onclick="toggle('pre2186', 'post2186')">        def prepare_jdbc_statement(conn, sql, opts)
+</li>
+                
+                <li onclick="toggle('pre2186', 'post2186')">          opts[:type] == :insert ? conn.prepareStatement(sql, JavaSQL::Statement.RETURN_GENERATED_KEYS) : super
+</li>
+                
+                <li onclick="toggle('pre2186', 'post2186')">        end
+</li>
+                
+                <li onclick="toggle('pre2186', 'post2186')">
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;sequel-4.4.0&#x2F;lib&#x2F;sequel&#x2F;adapters&#x2F;jdbc.rb</code>: in <code>execute</code>
+
+          
+          <div class="context" id="c2188">
+              
+              <ol start="279" class="pre-context" id="pre2188">
+                
+                <li onclick="toggle('pre2188', 'post2188')">            if block
+</li>
+                
+                <li onclick="toggle('pre2188', 'post2188')">              yield log_yield(sql){stmt.executeQuery(sql)}
+</li>
+                
+                <li onclick="toggle('pre2188', 'post2188')">            else
+</li>
+                
+                <li onclick="toggle('pre2188', 'post2188')">              case opts[:type]
+</li>
+                
+                <li onclick="toggle('pre2188', 'post2188')">              when :ddl
+</li>
+                
+                <li onclick="toggle('pre2188', 'post2188')">                log_yield(sql){stmt.execute(sql)}
+</li>
+                
+                <li onclick="toggle('pre2188', 'post2188')">              when :insert
+</li>
+                
+              </ol>
+              
+
+            <ol start="286" class="context-line">
+              <li onclick="toggle('pre2188', 'post2188')">                log_yield(sql){execute_statement_insert(stmt, sql)}<span>...</span></li></ol>
+
+              
+              <ol start='287' class="post-context" id="post2188">
+                
+                <li onclick="toggle('pre2188', 'post2188')">                last_insert_id(conn, opts.merge(:stmt=&gt;stmt))
+</li>
+                
+                <li onclick="toggle('pre2188', 'post2188')">              else
+</li>
+                
+                <li onclick="toggle('pre2188', 'post2188')">                log_yield(sql){stmt.executeUpdate(sql)}
+</li>
+                
+                <li onclick="toggle('pre2188', 'post2188')">              end
+</li>
+                
+                <li onclick="toggle('pre2188', 'post2188')">            end
+</li>
+                
+                <li onclick="toggle('pre2188', 'post2188')">          end
+</li>
+                
+                <li onclick="toggle('pre2188', 'post2188')">        end
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;sequel-4.4.0&#x2F;lib&#x2F;sequel&#x2F;database&#x2F;logging.rb</code>: in <code>log_yield</code>
+
+          
+          <div class="context" id="c2190">
+              
+              <ol start="26" class="pre-context" id="pre2190">
+                
+                <li onclick="toggle('pre2190', 'post2190')">    def log_info(message, args=nil)
+</li>
+                
+                <li onclick="toggle('pre2190', 'post2190')">      log_each(:info, args ? &quot;#{message}; #{args.inspect}&quot; : message)
+</li>
+                
+                <li onclick="toggle('pre2190', 'post2190')">    end
+</li>
+                
+                <li onclick="toggle('pre2190', 'post2190')">
+</li>
+                
+                <li onclick="toggle('pre2190', 'post2190')">    # Yield to the block, logging any errors at error level to all loggers,
+</li>
+                
+                <li onclick="toggle('pre2190', 'post2190')">    # and all other queries with the duration at warn or info level.
+</li>
+                
+                <li onclick="toggle('pre2190', 'post2190')">    def log_yield(sql, args=nil)
+</li>
+                
+              </ol>
+              
+
+            <ol start="33" class="context-line">
+              <li onclick="toggle('pre2190', 'post2190')">      return yield if @loggers.empty?<span>...</span></li></ol>
+
+              
+              <ol start='34' class="post-context" id="post2190">
+                
+                <li onclick="toggle('pre2190', 'post2190')">      sql = &quot;#{sql}; #{args.inspect}&quot; if args
+</li>
+                
+                <li onclick="toggle('pre2190', 'post2190')">      start = Time.now
+</li>
+                
+                <li onclick="toggle('pre2190', 'post2190')">      begin
+</li>
+                
+                <li onclick="toggle('pre2190', 'post2190')">        yield
+</li>
+                
+                <li onclick="toggle('pre2190', 'post2190')">      rescue =&gt; e
+</li>
+                
+                <li onclick="toggle('pre2190', 'post2190')">        log_exception(e, sql)
+</li>
+                
+                <li onclick="toggle('pre2190', 'post2190')">        raise
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;sequel-4.4.0&#x2F;lib&#x2F;sequel&#x2F;adapters&#x2F;jdbc.rb</code>: in <code>execute</code>
+
+          
+          <div class="context" id="c2192">
+              
+              <ol start="279" class="pre-context" id="pre2192">
+                
+                <li onclick="toggle('pre2192', 'post2192')">            if block
+</li>
+                
+                <li onclick="toggle('pre2192', 'post2192')">              yield log_yield(sql){stmt.executeQuery(sql)}
+</li>
+                
+                <li onclick="toggle('pre2192', 'post2192')">            else
+</li>
+                
+                <li onclick="toggle('pre2192', 'post2192')">              case opts[:type]
+</li>
+                
+                <li onclick="toggle('pre2192', 'post2192')">              when :ddl
+</li>
+                
+                <li onclick="toggle('pre2192', 'post2192')">                log_yield(sql){stmt.execute(sql)}
+</li>
+                
+                <li onclick="toggle('pre2192', 'post2192')">              when :insert
+</li>
+                
+              </ol>
+              
+
+            <ol start="286" class="context-line">
+              <li onclick="toggle('pre2192', 'post2192')">                log_yield(sql){execute_statement_insert(stmt, sql)}<span>...</span></li></ol>
+
+              
+              <ol start='287' class="post-context" id="post2192">
+                
+                <li onclick="toggle('pre2192', 'post2192')">                last_insert_id(conn, opts.merge(:stmt=&gt;stmt))
+</li>
+                
+                <li onclick="toggle('pre2192', 'post2192')">              else
+</li>
+                
+                <li onclick="toggle('pre2192', 'post2192')">                log_yield(sql){stmt.executeUpdate(sql)}
+</li>
+                
+                <li onclick="toggle('pre2192', 'post2192')">              end
+</li>
+                
+                <li onclick="toggle('pre2192', 'post2192')">            end
+</li>
+                
+                <li onclick="toggle('pre2192', 'post2192')">          end
+</li>
+                
+                <li onclick="toggle('pre2192', 'post2192')">        end
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;sequel-4.4.0&#x2F;lib&#x2F;sequel&#x2F;adapters&#x2F;jdbc.rb</code>: in <code>statement</code>
+
+          
+          <div class="context" id="c2194">
+              
+              <ol start="636" class="pre-context" id="pre2194">
+                
+                <li onclick="toggle('pre2194', 'post2194')">      def schema_parse_table_skip?(h, schema)
+</li>
+                
+                <li onclick="toggle('pre2194', 'post2194')">        h[:table_schem] == &#x27;INFORMATION_SCHEMA&#x27;
+</li>
+                
+                <li onclick="toggle('pre2194', 'post2194')">      end
+</li>
+                
+                <li onclick="toggle('pre2194', 'post2194')">
+</li>
+                
+                <li onclick="toggle('pre2194', 'post2194')">      # Yield a new statement object, and ensure that it is closed before returning.
+</li>
+                
+                <li onclick="toggle('pre2194', 'post2194')">      def statement(conn)
+</li>
+                
+                <li onclick="toggle('pre2194', 'post2194')">        stmt = conn.createStatement
+</li>
+                
+              </ol>
+              
+
+            <ol start="643" class="context-line">
+              <li onclick="toggle('pre2194', 'post2194')">        yield stmt<span>...</span></li></ol>
+
+              
+              <ol start='644' class="post-context" id="post2194">
+                
+                <li onclick="toggle('pre2194', 'post2194')">      rescue NativeException, JavaSQL::SQLException =&gt; e
+</li>
+                
+                <li onclick="toggle('pre2194', 'post2194')">        raise_error(e)
+</li>
+                
+                <li onclick="toggle('pre2194', 'post2194')">      ensure
+</li>
+                
+                <li onclick="toggle('pre2194', 'post2194')">        stmt.close if stmt
+</li>
+                
+                <li onclick="toggle('pre2194', 'post2194')">      end
+</li>
+                
+                <li onclick="toggle('pre2194', 'post2194')">    end
+</li>
+                
+                <li onclick="toggle('pre2194', 'post2194')">    
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;sequel-4.4.0&#x2F;lib&#x2F;sequel&#x2F;adapters&#x2F;jdbc.rb</code>: in <code>execute</code>
+
+          
+          <div class="context" id="c2196">
+              
+              <ol start="271" class="pre-context" id="pre2196">
+                
+                <li onclick="toggle('pre2196', 'post2196')">      
+</li>
+                
+                <li onclick="toggle('pre2196', 'post2196')">      # Execute the given SQL.  If a block is given, if should be a SELECT
+</li>
+                
+                <li onclick="toggle('pre2196', 'post2196')">      # statement or something else that returns rows.
+</li>
+                
+                <li onclick="toggle('pre2196', 'post2196')">      def execute(sql, opts=OPTS, &amp;block)
+</li>
+                
+                <li onclick="toggle('pre2196', 'post2196')">        return call_sproc(sql, opts, &amp;block) if opts[:sproc]
+</li>
+                
+                <li onclick="toggle('pre2196', 'post2196')">        return execute_prepared_statement(sql, opts, &amp;block) if [Symbol, Dataset].any?{|c| sql.is_a?(c)}
+</li>
+                
+                <li onclick="toggle('pre2196', 'post2196')">        synchronize(opts[:server]) do |conn|
+</li>
+                
+              </ol>
+              
+
+            <ol start="278" class="context-line">
+              <li onclick="toggle('pre2196', 'post2196')">          statement(conn) do |stmt|<span>...</span></li></ol>
+
+              
+              <ol start='279' class="post-context" id="post2196">
+                
+                <li onclick="toggle('pre2196', 'post2196')">            if block
+</li>
+                
+                <li onclick="toggle('pre2196', 'post2196')">              yield log_yield(sql){stmt.executeQuery(sql)}
+</li>
+                
+                <li onclick="toggle('pre2196', 'post2196')">            else
+</li>
+                
+                <li onclick="toggle('pre2196', 'post2196')">              case opts[:type]
+</li>
+                
+                <li onclick="toggle('pre2196', 'post2196')">              when :ddl
+</li>
+                
+                <li onclick="toggle('pre2196', 'post2196')">                log_yield(sql){stmt.execute(sql)}
+</li>
+                
+                <li onclick="toggle('pre2196', 'post2196')">              when :insert
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;sequel-4.4.0&#x2F;lib&#x2F;sequel&#x2F;connection_pool&#x2F;threaded.rb</code>: in <code>hold</code>
+
+          
+          <div class="context" id="c2198">
+              
+              <ol start="97" class="pre-context" id="pre2198">
+                
+                <li onclick="toggle('pre2198', 'post2198')">        sleep_time = @sleep_time
+</li>
+                
+                <li onclick="toggle('pre2198', 'post2198')">        sleep sleep_time
+</li>
+                
+                <li onclick="toggle('pre2198', 'post2198')">        until conn = acquire(t)
+</li>
+                
+                <li onclick="toggle('pre2198', 'post2198')">          raise(::Sequel::PoolTimeout) if Time.now &gt; timeout
+</li>
+                
+                <li onclick="toggle('pre2198', 'post2198')">          sleep sleep_time
+</li>
+                
+                <li onclick="toggle('pre2198', 'post2198')">        end
+</li>
+                
+                <li onclick="toggle('pre2198', 'post2198')">      end
+</li>
+                
+              </ol>
+              
+
+            <ol start="104" class="context-line">
+              <li onclick="toggle('pre2198', 'post2198')">      yield conn<span>...</span></li></ol>
+
+              
+              <ol start='105' class="post-context" id="post2198">
+                
+                <li onclick="toggle('pre2198', 'post2198')">    rescue Sequel::DatabaseDisconnectError
+</li>
+                
+                <li onclick="toggle('pre2198', 'post2198')">      oconn = conn
+</li>
+                
+                <li onclick="toggle('pre2198', 'post2198')">      conn = nil
+</li>
+                
+                <li onclick="toggle('pre2198', 'post2198')">      db.disconnect_connection(oconn) if oconn
+</li>
+                
+                <li onclick="toggle('pre2198', 'post2198')">      @allocated.delete(t)
+</li>
+                
+                <li onclick="toggle('pre2198', 'post2198')">      raise
+</li>
+                
+                <li onclick="toggle('pre2198', 'post2198')">    ensure
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;sequel-4.4.0&#x2F;lib&#x2F;sequel&#x2F;connection_pool&#x2F;threaded.rb</code>: in <code>hold</code>
+
+          
+          <div class="context" id="c2200">
+              
+              <ol start="86" class="pre-context" id="pre2200">
+                
+                <li onclick="toggle('pre2200', 'post2200')">  # connection can be acquired, a Sequel::PoolTimeout is 
+</li>
+                
+                <li onclick="toggle('pre2200', 'post2200')">  # raised.
+</li>
+                
+                <li onclick="toggle('pre2200', 'post2200')">  def hold(server=nil)
+</li>
+                
+                <li onclick="toggle('pre2200', 'post2200')">    t = Thread.current
+</li>
+                
+                <li onclick="toggle('pre2200', 'post2200')">    if conn = owned_connection(t)
+</li>
+                
+                <li onclick="toggle('pre2200', 'post2200')">      return yield(conn)
+</li>
+                
+                <li onclick="toggle('pre2200', 'post2200')">    end
+</li>
+                
+              </ol>
+              
+
+            <ol start="93" class="context-line">
+              <li onclick="toggle('pre2200', 'post2200')">    begin<span>...</span></li></ol>
+
+              
+              <ol start='94' class="post-context" id="post2200">
+                
+                <li onclick="toggle('pre2200', 'post2200')">      unless conn = acquire(t)
+</li>
+                
+                <li onclick="toggle('pre2200', 'post2200')">        time = Time.now
+</li>
+                
+                <li onclick="toggle('pre2200', 'post2200')">        timeout = time + @timeout
+</li>
+                
+                <li onclick="toggle('pre2200', 'post2200')">        sleep_time = @sleep_time
+</li>
+                
+                <li onclick="toggle('pre2200', 'post2200')">        sleep sleep_time
+</li>
+                
+                <li onclick="toggle('pre2200', 'post2200')">        until conn = acquire(t)
+</li>
+                
+                <li onclick="toggle('pre2200', 'post2200')">          raise(::Sequel::PoolTimeout) if Time.now &gt; timeout
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;sequel-4.4.0&#x2F;lib&#x2F;sequel&#x2F;database&#x2F;connecting.rb</code>: in <code>synchronize</code>
+
+          
+          <div class="context" id="c2202">
+              
+              <ol start="227" class="pre-context" id="pre2202">
+                
+                <li onclick="toggle('pre2202', 'post2202')">      #   end
+</li>
+                
+                <li onclick="toggle('pre2202', 'post2202')">      def synchronize(server=nil)
+</li>
+                
+                <li onclick="toggle('pre2202', 'post2202')">        @pool.hold(server || :default){|conn| yield conn}
+</li>
+                
+                <li onclick="toggle('pre2202', 'post2202')">      end
+</li>
+                
+                <li onclick="toggle('pre2202', 'post2202')">    else
+</li>
+                
+                <li onclick="toggle('pre2202', 'post2202')">    # :nocov:
+</li>
+                
+                <li onclick="toggle('pre2202', 'post2202')">      def synchronize(server=nil, &amp;block)
+</li>
+                
+              </ol>
+              
+
+            <ol start="234" class="context-line">
+              <li onclick="toggle('pre2202', 'post2202')">        @pool.hold(server || :default, &amp;block)<span>...</span></li></ol>
+
+              
+              <ol start='235' class="post-context" id="post2202">
+                
+                <li onclick="toggle('pre2202', 'post2202')">      end
+</li>
+                
+                <li onclick="toggle('pre2202', 'post2202')">    # :nocov:
+</li>
+                
+                <li onclick="toggle('pre2202', 'post2202')">    end
+</li>
+                
+                <li onclick="toggle('pre2202', 'post2202')">    
+</li>
+                
+                <li onclick="toggle('pre2202', 'post2202')">    # Attempts to acquire a database connection.  Returns true if successful.
+</li>
+                
+                <li onclick="toggle('pre2202', 'post2202')">    # Will probably raise an Error if unsuccessful.  If a server argument
+</li>
+                
+                <li onclick="toggle('pre2202', 'post2202')">    # is given, attempts to acquire a database connection to the given
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;sequel-4.4.0&#x2F;lib&#x2F;sequel&#x2F;adapters&#x2F;jdbc.rb</code>: in <code>execute</code>
+
+          
+          <div class="context" id="c2204">
+              
+              <ol start="270" class="pre-context" id="pre2204">
+                
+                <li onclick="toggle('pre2204', 'post2204')">      end
+</li>
+                
+                <li onclick="toggle('pre2204', 'post2204')">      
+</li>
+                
+                <li onclick="toggle('pre2204', 'post2204')">      # Execute the given SQL.  If a block is given, if should be a SELECT
+</li>
+                
+                <li onclick="toggle('pre2204', 'post2204')">      # statement or something else that returns rows.
+</li>
+                
+                <li onclick="toggle('pre2204', 'post2204')">      def execute(sql, opts=OPTS, &amp;block)
+</li>
+                
+                <li onclick="toggle('pre2204', 'post2204')">        return call_sproc(sql, opts, &amp;block) if opts[:sproc]
+</li>
+                
+                <li onclick="toggle('pre2204', 'post2204')">        return execute_prepared_statement(sql, opts, &amp;block) if [Symbol, Dataset].any?{|c| sql.is_a?(c)}
+</li>
+                
+              </ol>
+              
+
+            <ol start="277" class="context-line">
+              <li onclick="toggle('pre2204', 'post2204')">        synchronize(opts[:server]) do |conn|<span>...</span></li></ol>
+
+              
+              <ol start='278' class="post-context" id="post2204">
+                
+                <li onclick="toggle('pre2204', 'post2204')">          statement(conn) do |stmt|
+</li>
+                
+                <li onclick="toggle('pre2204', 'post2204')">            if block
+</li>
+                
+                <li onclick="toggle('pre2204', 'post2204')">              yield log_yield(sql){stmt.executeQuery(sql)}
+</li>
+                
+                <li onclick="toggle('pre2204', 'post2204')">            else
+</li>
+                
+                <li onclick="toggle('pre2204', 'post2204')">              case opts[:type]
+</li>
+                
+                <li onclick="toggle('pre2204', 'post2204')">              when :ddl
+</li>
+                
+                <li onclick="toggle('pre2204', 'post2204')">                log_yield(sql){stmt.execute(sql)}
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;sequel-4.4.0&#x2F;lib&#x2F;sequel&#x2F;adapters&#x2F;jdbc.rb</code>: in <code>execute_insert</code>
+
+          
+          <div class="context" id="c2206">
+              
+              <ol start="299" class="pre-context" id="pre2206">
+                
+                <li onclick="toggle('pre2206', 'post2206')">      def execute_ddl(sql, opts=OPTS)
+</li>
+                
+                <li onclick="toggle('pre2206', 'post2206')">        execute(sql, {:type=&gt;:ddl}.merge(opts))
+</li>
+                
+                <li onclick="toggle('pre2206', 'post2206')">      end
+</li>
+                
+                <li onclick="toggle('pre2206', 'post2206')">      
+</li>
+                
+                <li onclick="toggle('pre2206', 'post2206')">      # Execute the given INSERT SQL, returning the last inserted
+</li>
+                
+                <li onclick="toggle('pre2206', 'post2206')">      # row id.
+</li>
+                
+                <li onclick="toggle('pre2206', 'post2206')">      def execute_insert(sql, opts=OPTS)
+</li>
+                
+              </ol>
+              
+
+            <ol start="306" class="context-line">
+              <li onclick="toggle('pre2206', 'post2206')">        execute(sql, {:type=&gt;:insert}.merge(opts))<span>...</span></li></ol>
+
+              
+              <ol start='307' class="post-context" id="post2206">
+                
+                <li onclick="toggle('pre2206', 'post2206')">      end
+</li>
+                
+                <li onclick="toggle('pre2206', 'post2206')">
+</li>
+                
+                <li onclick="toggle('pre2206', 'post2206')">      # Use the JDBC metadata to get a list of foreign keys for the table.
+</li>
+                
+                <li onclick="toggle('pre2206', 'post2206')">      def foreign_key_list(table, opts=OPTS)
+</li>
+                
+                <li onclick="toggle('pre2206', 'post2206')">        m = output_identifier_meth
+</li>
+                
+                <li onclick="toggle('pre2206', 'post2206')">        schema, table = metadata_schema_and_table(table, opts)
+</li>
+                
+                <li onclick="toggle('pre2206', 'post2206')">        foreign_keys = {}
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;sequel-4.4.0&#x2F;lib&#x2F;sequel&#x2F;dataset&#x2F;actions.rb</code>: in <code>execute_insert</code>
+
+          
+          <div class="context" id="c2208">
+              
+              <ol start="804" class="pre-context" id="pre2208">
+                
+                <li onclick="toggle('pre2208', 'post2208')">    # Execute the given SQL on the database using execute_dui.
+</li>
+                
+                <li onclick="toggle('pre2208', 'post2208')">    def execute_dui(sql, opts=OPTS, &amp;block)
+</li>
+                
+                <li onclick="toggle('pre2208', 'post2208')">      @db.execute_dui(sql, default_server_opts(opts), &amp;block)
+</li>
+                
+                <li onclick="toggle('pre2208', 'post2208')">    end
+</li>
+                
+                <li onclick="toggle('pre2208', 'post2208')">    
+</li>
+                
+                <li onclick="toggle('pre2208', 'post2208')">    # Execute the given SQL on the database using execute_insert.
+</li>
+                
+                <li onclick="toggle('pre2208', 'post2208')">    def execute_insert(sql, opts=OPTS, &amp;block)
+</li>
+                
+              </ol>
+              
+
+            <ol start="811" class="context-line">
+              <li onclick="toggle('pre2208', 'post2208')">      @db.execute_insert(sql, default_server_opts(opts), &amp;block)<span>...</span></li></ol>
+
+              
+              <ol start='812' class="post-context" id="post2208">
+                
+                <li onclick="toggle('pre2208', 'post2208')">    end
+</li>
+                
+                <li onclick="toggle('pre2208', 'post2208')">    
+</li>
+                
+                <li onclick="toggle('pre2208', 'post2208')">    # Return a plain symbol given a potentially qualified or aliased symbol,
+</li>
+                
+                <li onclick="toggle('pre2208', 'post2208')">    # specifying the symbol that is likely to be used as the hash key
+</li>
+                
+                <li onclick="toggle('pre2208', 'post2208')">    # for the column when records are returned.  Return nil if no hash key
+</li>
+                
+                <li onclick="toggle('pre2208', 'post2208')">    # can be determined
+</li>
+                
+                <li onclick="toggle('pre2208', 'post2208')">    def _hash_key_symbol(s, recursing=false)
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;sequel-4.4.0&#x2F;lib&#x2F;sequel&#x2F;dataset&#x2F;actions.rb</code>: in <code>insert</code>
+
+          
+          <div class="context" id="c2210">
+              
+              <ol start="332" class="pre-context" id="pre2210">
+                
+                <li onclick="toggle('pre2210', 'post2210')">    #   DB[:items].insert([:a, :b], DB[:old_items])
+</li>
+                
+                <li onclick="toggle('pre2210', 'post2210')">    #   # INSERT INTO items (a, b) SELECT * FROM old_items
+</li>
+                
+                <li onclick="toggle('pre2210', 'post2210')">    def insert(*values, &amp;block)
+</li>
+                
+                <li onclick="toggle('pre2210', 'post2210')">      sql = insert_sql(*values)
+</li>
+                
+                <li onclick="toggle('pre2210', 'post2210')">      if uses_returning?(:insert)
+</li>
+                
+                <li onclick="toggle('pre2210', 'post2210')">        returning_fetch_rows(sql, &amp;block)
+</li>
+                
+                <li onclick="toggle('pre2210', 'post2210')">      else
+</li>
+                
+              </ol>
+              
+
+            <ol start="339" class="context-line">
+              <li onclick="toggle('pre2210', 'post2210')">        execute_insert(sql)<span>...</span></li></ol>
+
+              
+              <ol start='340' class="post-context" id="post2210">
+                
+                <li onclick="toggle('pre2210', 'post2210')">      end
+</li>
+                
+                <li onclick="toggle('pre2210', 'post2210')">    end
+</li>
+                
+                <li onclick="toggle('pre2210', 'post2210')">    
+</li>
+                
+                <li onclick="toggle('pre2210', 'post2210')">    # Returns the interval between minimum and maximum values for the given 
+</li>
+                
+                <li onclick="toggle('pre2210', 'post2210')">    # column&#x2F;expression. Uses a virtual row block if no argument is given.
+</li>
+                
+                <li onclick="toggle('pre2210', 'post2210')">    #
+</li>
+                
+                <li onclick="toggle('pre2210', 'post2210')">    #   DB[:table].interval(:id) # SELECT (max(id) - min(id)) FROM table LIMIT 1
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;epic&#x2F;src&#x2F;epic_sequel.rb</code>: in <code>grnetpidsequence</code>
+
+          
+          <div class="context" id="c2212">
+              
+              <ol start="151" class="pre-context" id="pre2212">
+                
+                <li onclick="toggle('pre2212', 'post2212')">    ###self.pool[&#x27;INSERT INTO pidsequence (processID) VALUE (NULL); SELECT LAST_INSERT_ID()&#x27;].get
+</li>
+                
+                <li onclick="toggle('pre2212', 'post2212')">    ###self.pool[&#x27;SELECT AUTO_INCREMENT FROM information_schema.tables WHERE table_name = &quot;pidsequence&quot;].get
+</li>
+                
+                <li onclick="toggle('pre2212', 'post2212')">    self.pool[&quot;INSERT INTO `pidsequence` (`processID`) VALUES (NULL)&quot;].insert
+</li>
+                
+                <li onclick="toggle('pre2212', 'post2212')">  end
+</li>
+                
+                <li onclick="toggle('pre2212', 'post2212')">
+</li>
+                
+                <li onclick="toggle('pre2212', 'post2212')">  # @return [Fixnum]
+</li>
+                
+                <li onclick="toggle('pre2212', 'post2212')">  def grnetpidsequence
+</li>
+                
+              </ol>
+              
+
+            <ol start="158" class="context-line">
+              <li onclick="toggle('pre2212', 'post2212')">    self.pool[&quot;INSERT INTO `pidsequence` (`processID`) VALUES (NULL)&quot;].insert<span>...</span></li></ol>
+
+              
+              <ol start='159' class="post-context" id="post2212">
+                
+                <li onclick="toggle('pre2212', 'post2212')">  end
+</li>
+                
+                <li onclick="toggle('pre2212', 'post2212')">
+</li>
+                
+                <li onclick="toggle('pre2212', 'post2212')">end
+</li>
+                
+                <li onclick="toggle('pre2212', 'post2212')">
+</li>
+                
+                <li onclick="toggle('pre2212', 'post2212')">
+</li>
+                
+                <li onclick="toggle('pre2212', 'post2212')">end
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;epic&#x2F;src&#x2F;epic_generator.rb</code>: in <code>generate</code>
+
+          
+          <div class="context" id="c2214">
+              
+              <ol start="280" class="pre-context" id="pre2214">
+                
+                <li onclick="toggle('pre2214', 'post2214')">        raise Rackful::HTTP403Forbidden, &quot;No institute code is configured for your user.&quot;
+</li>
+                
+                <li onclick="toggle('pre2214', 'post2214')">      end
+</li>
+                
+                <li onclick="toggle('pre2214', 'post2214')">
+</li>
+                
+                <li onclick="toggle('pre2214', 'post2214')">      inst = USERS[request.env[&#x27;REMOTE_USER&#x27;]][:institute].upcase        # institute from users file
+</li>
+                
+                <li onclick="toggle('pre2214', 'post2214')">
+</li>
+                
+                <li onclick="toggle('pre2214', 'post2214')">      prefix = ( request.GET[&#x27;prefix&#x27;] ) ? request.GET[&#x27;prefix&#x27;].upcase + &#x27;-&#x27; : &#x27;&#x27;
+</li>
+                
+                <li onclick="toggle('pre2214', 'post2214')">      suffix = ( request.GET[&#x27;suffix&#x27;] ) ? &#x27;-&#x27; + request.GET[&#x27;suffix&#x27;].upcase : &#x27;&#x27;
+</li>
+                
+              </ol>
+              
+
+            <ol start="287" class="context-line">
+              <li onclick="toggle('pre2214', 'post2214')">      sequence = DB.instance.grnetpidsequence<span>...</span></li></ol>
+
+              
+              <ol start='288' class="post-context" id="post2214">
+                
+                <li onclick="toggle('pre2214', 'post2214')">      ### sequence = 323984    #323984-&gt;4F190 (9),  #20249-&gt;004F19 (E),  #312607-&gt;&quot;04C51F&quot; (D),  #304415-&gt;&quot;04A51F&quot; (1),  #5551-&gt;&quot;015AF&quot; (5)
+</li>
+                
+                <li onclick="toggle('pre2214', 'post2214')">      if sequence &lt; 1 or sequence &gt; &quot;FFFFFFFFFFFF&quot;.to_i(16)
+</li>
+                
+                <li onclick="toggle('pre2214', 'post2214')">        raise Rackful::HTTP500InternalServerError, &quot;A new sequence number cannot be generated.&quot;
+</li>
+                
+                <li onclick="toggle('pre2214', 'post2214')">      end
+</li>
+                
+                <li onclick="toggle('pre2214', 'post2214')">
+</li>
+                
+                <li onclick="toggle('pre2214', 'post2214')">      # Fixnum -&gt; Hex: http:&#x2F;&#x2F;www.ruby-doc.org&#x2F;core&#x2F;classes&#x2F;Fixnum.html#M001069
+</li>
+                
+                <li onclick="toggle('pre2214', 'post2214')">      # Fixnum.to_s(base=16): Returns a string containing the representation of fix radix base (between 2 and 36).
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;epic&#x2F;src&#x2F;epic_handles.rb</code>: in <code>do_POST</code>
+
+          
+          <div class="context" id="c2216">
+              
+              <ol start="81" class="pre-context" id="pre2216">
+                
+                <li onclick="toggle('pre2216', 'post2216')">  def do_POST request, response
+</li>
+                
+                <li onclick="toggle('pre2216', 'post2216')">    LOGGER.debug_method(self, caller, response)
+</li>
+                
+                <li onclick="toggle('pre2216', 'post2216')">    generator_name = request.GET[&#x27;generator&#x27;] || EPIC::DEFAULT_GENERATOR
+</li>
+                
+                <li onclick="toggle('pre2216', 'post2216')">    unless generator = request.resource_factory[&quot;&#x2F;generators&#x2F;#{generator_name}&quot;]
+</li>
+                
+                <li onclick="toggle('pre2216', 'post2216')">      raise Rackful::HTTP400BadRequest, &quot;No such generator: &#x27;#{generator_name}&#x27;&quot;
+</li>
+                
+                <li onclick="toggle('pre2216', 'post2216')">    end
+</li>
+                
+                <li onclick="toggle('pre2216', 'post2216')">    LOGGER.info_httpevent(&quot;New Handle created&quot;, &quot;POST&quot;)
+</li>
+                
+              </ol>
+              
+
+            <ol start="88" class="context-line">
+              <li onclick="toggle('pre2216', 'post2216')">    pid_suffix = escape_path( generator.generate( request ) )<span>...</span></li></ol>
+
+              
+              <ol start='89' class="post-context" id="post2216">
+                
+                <li onclick="toggle('pre2216', 'post2216')">    handle = request.resource_factory[&quot;&#x2F;handles&#x2F;#{prefix}&#x2F;#{pid_suffix}&quot;]
+</li>
+                
+                <li onclick="toggle('pre2216', 'post2216')">    handle.do_PUT( request, response )
+</li>
+                
+                <li onclick="toggle('pre2216', 'post2216')">  end
+</li>
+                
+                <li onclick="toggle('pre2216', 'post2216')">
+</li>
+                
+                <li onclick="toggle('pre2216', 'post2216')">
+</li>
+                
+                <li onclick="toggle('pre2216', 'post2216')">end # class Handles
+</li>
+                
+                <li onclick="toggle('pre2216', 'post2216')">
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>org&#x2F;jruby&#x2F;RubyBasicObject.java</code>: in <code>__send__</code>
+
+          
+      </li>
+
+      <li class="frame">
+        <code>org&#x2F;jruby&#x2F;RubyKernel.java</code>: in <code>send</code>
+
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;rackful-0.1.4&#x2F;lib&#x2F;rackful&#x2F;resource.rb</code>: in <code>http_method</code>
+
+          
+          <div class="context" id="c2218">
+              
+              <ol start="417" class="pre-context" id="pre2218">
+                
+                <li onclick="toggle('pre2218', 'post2218')">    end
+</li>
+                
+                <li onclick="toggle('pre2218', 'post2218')">    if  ( request.content_length ||
+</li>
+                
+                <li onclick="toggle('pre2218', 'post2218')">          &#x27;chunked&#x27; == request.env[&#x27;HTTP_TRANSFER_ENCODING&#x27;] ) and
+</li>
+                
+                <li onclick="toggle('pre2218', 'post2218')">        ! self.class.media_types[method] ||
+</li>
+                
+                <li onclick="toggle('pre2218', 'post2218')">        ! self.class.media_types[method].include?( request.media_type )
+</li>
+                
+                <li onclick="toggle('pre2218', 'post2218')">      raise HTTP415UnsupportedMediaType, self.class.media_types[method]
+</li>
+                
+                <li onclick="toggle('pre2218', 'post2218')">    end
+</li>
+                
+              </ol>
+              
+
+            <ol start="424" class="context-line">
+              <li onclick="toggle('pre2218', 'post2218')">    self.send( :&quot;do_#{method}&quot;, request, response )<span>...</span></li></ol>
+
+              
+              <ol start='425' class="post-context" id="post2218">
+                
+                <li onclick="toggle('pre2218', 'post2218')">  end
+</li>
+                
+                <li onclick="toggle('pre2218', 'post2218')">
+</li>
+                
+                <li onclick="toggle('pre2218', 'post2218')">
+</li>
+                
+                <li onclick="toggle('pre2218', 'post2218')">=begin markdown
+</li>
+                
+                <li onclick="toggle('pre2218', 'post2218')">Adds `ETag:` and `Last-Modified:` response headers.
+</li>
+                
+                <li onclick="toggle('pre2218', 'post2218')">=end
+</li>
+                
+                <li onclick="toggle('pre2218', 'post2218')">  def default_headers
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;rackful-0.1.4&#x2F;lib&#x2F;rackful&#x2F;server.rb</code>: in <code>call!</code>
+
+          
+          <div class="context" id="c2220">
+              
+              <ol start="77" class="pre-context" id="pre2220">
+                
+                <li onclick="toggle('pre2220', 'post2220')">        response.header[&#x27;Content-Location&#x27;] = resource.path
+</li>
+                
+                <li onclick="toggle('pre2220', 'post2220')">        request.content_path = resource.path
+</li>
+                
+                <li onclick="toggle('pre2220', 'post2220')">      end
+</li>
+                
+                <li onclick="toggle('pre2220', 'post2220')">      request.assert_if_headers resource
+</li>
+                
+                <li onclick="toggle('pre2220', 'post2220')">      if %w{HEAD GET OPTIONS PUT DELETE}.include?( request.request_method )
+</li>
+                
+                <li onclick="toggle('pre2220', 'post2220')">        resource.__send__( :&quot;http_#{request.request_method}&quot;, request, response )
+</li>
+                
+                <li onclick="toggle('pre2220', 'post2220')">      else
+</li>
+                
+              </ol>
+              
+
+            <ol start="84" class="context-line">
+              <li onclick="toggle('pre2220', 'post2220')">        resource.http_method request, response<span>...</span></li></ol>
+
+              
+              <ol start='85' class="post-context" id="post2220">
+                
+                <li onclick="toggle('pre2220', 'post2220')">      end
+</li>
+                
+                <li onclick="toggle('pre2220', 'post2220')">    rescue HTTPStatus =&gt; e
+</li>
+                
+                <li onclick="toggle('pre2220', 'post2220')">      # Already handled by HTTPStatus#initialize:
+</li>
+                
+                <li onclick="toggle('pre2220', 'post2220')">      #raise if $DEBUG &amp;&amp; 500 &lt;= e.status
+</li>
+                
+                <li onclick="toggle('pre2220', 'post2220')">      bct = e.class.best_content_type request.accept, false
+</li>
+                
+                <li onclick="toggle('pre2220', 'post2220')">      serializer = e.serializer(bct)
+</li>
+                
+                <li onclick="toggle('pre2220', 'post2220')">      response = Rack::Response.new serializer, e.status, e.headers
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;rackful-0.1.4&#x2F;lib&#x2F;rackful&#x2F;server.rb</code>: in <code>call!</code>
+
+          
+          <div class="context" id="c2222">
+              
+              <ol start="66" class="pre-context" id="pre2222">
+                
+                <li onclick="toggle('pre2222', 'post2222')">@return [Array&lt;(status_code, response_headers, response_body)&gt;]
+</li>
+                
+                <li onclick="toggle('pre2222', 'post2222')">=end
+</li>
+                
+                <li onclick="toggle('pre2222', 'post2222')">  def call!(p_env)
+</li>
+                
+                <li onclick="toggle('pre2222', 'post2222')">    request = Request.new( self.resource_factory, p_env )
+</li>
+                
+                <li onclick="toggle('pre2222', 'post2222')">    # See also Request::current():
+</li>
+                
+                <li onclick="toggle('pre2222', 'post2222')">    Thread.current[:rackful_request] = request
+</li>
+                
+                <li onclick="toggle('pre2222', 'post2222')">    response = Rack::Response.new
+</li>
+                
+              </ol>
+              
+
+            <ol start="73" class="context-line">
+              <li onclick="toggle('pre2222', 'post2222')">    begin<span>...</span></li></ol>
+
+              
+              <ol start='74' class="post-context" id="post2222">
+                
+                <li onclick="toggle('pre2222', 'post2222')">      raise HTTP404NotFound, request.path \
+</li>
+                
+                <li onclick="toggle('pre2222', 'post2222')">        unless resource = self.resource_factory[Path.new(request.path)]
+</li>
+                
+                <li onclick="toggle('pre2222', 'post2222')">      unless resource.path == request.path
+</li>
+                
+                <li onclick="toggle('pre2222', 'post2222')">        response.header[&#x27;Content-Location&#x27;] = resource.path
+</li>
+                
+                <li onclick="toggle('pre2222', 'post2222')">        request.content_path = resource.path
+</li>
+                
+                <li onclick="toggle('pre2222', 'post2222')">      end
+</li>
+                
+                <li onclick="toggle('pre2222', 'post2222')">      request.assert_if_headers resource
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;rackful-0.1.4&#x2F;lib&#x2F;rackful&#x2F;server.rb</code>: in <code>call</code>
+
+          
+          <div class="context" id="c2224">
+              
+              <ol start="52" class="pre-context" id="pre2224">
+                
+                <li onclick="toggle('pre2224', 'post2224')">
+</li>
+                
+                <li onclick="toggle('pre2224', 'post2224')">For thread safety, this method clones `self`, which handles the request in
+</li>
+                
+                <li onclick="toggle('pre2224', 'post2224')">{#call!}. A similar approach is taken by the Sinatra library.
+</li>
+                
+                <li onclick="toggle('pre2224', 'post2224')">@return [Array&lt;(status_code, response_headers, response_body)&gt;]
+</li>
+                
+                <li onclick="toggle('pre2224', 'post2224')">=end
+</li>
+                
+                <li onclick="toggle('pre2224', 'post2224')">  def call(p_env)
+</li>
+                
+                <li onclick="toggle('pre2224', 'post2224')">    start = Time.now
+</li>
+                
+              </ol>
+              
+
+            <ol start="59" class="context-line">
+              <li onclick="toggle('pre2224', 'post2224')">    retval = dup.call! p_env<span>...</span></li></ol>
+
+              
+              <ol start='60' class="post-context" id="post2224">
+                
+                <li onclick="toggle('pre2224', 'post2224')">    #$stderr.puts( p_env.inspect )
+</li>
+                
+                <li onclick="toggle('pre2224', 'post2224')">    retval
+</li>
+                
+                <li onclick="toggle('pre2224', 'post2224')">  end
+</li>
+                
+                <li onclick="toggle('pre2224', 'post2224')">
+</li>
+                
+                <li onclick="toggle('pre2224', 'post2224')">
+</li>
+                
+                <li onclick="toggle('pre2224', 'post2224')">=begin markdown
+</li>
+                
+                <li onclick="toggle('pre2224', 'post2224')">@return [Array&lt;(status_code, response_headers, response_body)&gt;]
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;rackful-0.1.4&#x2F;lib&#x2F;rackful&#x2F;middleware&#x2F;header_spoofing.rb</code>: in <code>call</code>
+
+          
+          <div class="context" id="c2226">
+              
+              <ol start="31" class="pre-context" id="pre2226">
+                
+                <li onclick="toggle('pre2226', 'post2226')">
+</li>
+                
+                <li onclick="toggle('pre2226', 'post2226')">def initialize app
+</li>
+                
+                <li onclick="toggle('pre2226', 'post2226')">  @app = app
+</li>
+                
+                <li onclick="toggle('pre2226', 'post2226')">end
+</li>
+                
+                <li onclick="toggle('pre2226', 'post2226')">
+</li>
+                
+                <li onclick="toggle('pre2226', 'post2226')">def call env
+</li>
+                
+                <li onclick="toggle('pre2226', 'post2226')">  before_call env
+</li>
+                
+              </ol>
+              
+
+            <ol start="38" class="context-line">
+              <li onclick="toggle('pre2226', 'post2226')">  r = @app.call env<span>...</span></li></ol>
+
+              
+              <ol start='39' class="post-context" id="post2226">
+                
+                <li onclick="toggle('pre2226', 'post2226')">  after_call env
+</li>
+                
+                <li onclick="toggle('pre2226', 'post2226')">  r
+</li>
+                
+                <li onclick="toggle('pre2226', 'post2226')">end
+</li>
+                
+                <li onclick="toggle('pre2226', 'post2226')">
+</li>
+                
+                <li onclick="toggle('pre2226', 'post2226')">def before_call env
+</li>
+                
+                <li onclick="toggle('pre2226', 'post2226')">  original_query_string = env[&#x27;QUERY_STRING&#x27;]
+</li>
+                
+                <li onclick="toggle('pre2226', 'post2226')">  env[&#x27;QUERY_STRING&#x27;] = original_query_string.
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;rack-1.5.2&#x2F;lib&#x2F;rack&#x2F;auth&#x2F;basic.rb</code>: in <code>call</code>
+
+          
+          <div class="context" id="c2228">
+              
+              <ol start="18" class="pre-context" id="pre2228">
+                
+                <li onclick="toggle('pre2228', 'post2228')">        return unauthorized unless auth.provided?
+</li>
+                
+                <li onclick="toggle('pre2228', 'post2228')">
+</li>
+                
+                <li onclick="toggle('pre2228', 'post2228')">        return bad_request unless auth.basic?
+</li>
+                
+                <li onclick="toggle('pre2228', 'post2228')">
+</li>
+                
+                <li onclick="toggle('pre2228', 'post2228')">        if valid?(auth)
+</li>
+                
+                <li onclick="toggle('pre2228', 'post2228')">          env[&#x27;REMOTE_USER&#x27;] = auth.username
+</li>
+                
+                <li onclick="toggle('pre2228', 'post2228')">
+</li>
+                
+              </ol>
+              
+
+            <ol start="25" class="context-line">
+              <li onclick="toggle('pre2228', 'post2228')">          return @app.call(env)<span>...</span></li></ol>
+
+              
+              <ol start='26' class="post-context" id="post2228">
+                
+                <li onclick="toggle('pre2228', 'post2228')">        end
+</li>
+                
+                <li onclick="toggle('pre2228', 'post2228')">
+</li>
+                
+                <li onclick="toggle('pre2228', 'post2228')">        unauthorized
+</li>
+                
+                <li onclick="toggle('pre2228', 'post2228')">      end
+</li>
+                
+                <li onclick="toggle('pre2228', 'post2228')">
+</li>
+                
+                <li onclick="toggle('pre2228', 'post2228')">
+</li>
+                
+                <li onclick="toggle('pre2228', 'post2228')">      private
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;rackful-0.1.4&#x2F;lib&#x2F;rackful&#x2F;middleware&#x2F;relative_location.rb</code>: in <code>call</code>
+
+          
+          <div class="context" id="c2230">
+              
+              <ol start="51" class="pre-context" id="pre2230">
+                
+                <li onclick="toggle('pre2230', 'post2230')">    end
+</li>
+                
+                <li onclick="toggle('pre2230', 'post2230')">    res[1][&#x27;Location&#x27;] = location
+</li>
+                
+                <li onclick="toggle('pre2230', 'post2230')">  end
+</li>
+                
+                <li onclick="toggle('pre2230', 'post2230')">  res
+</li>
+                
+                <li onclick="toggle('pre2230', 'post2230')">end
+</li>
+                
+                <li onclick="toggle('pre2230', 'post2230')">
+</li>
+                
+                <li onclick="toggle('pre2230', 'post2230')">def call(env)
+</li>
+                
+              </ol>
+              
+
+            <ol start="58" class="context-line">
+              <li onclick="toggle('pre2230', 'post2230')">  res = @app.call(env)<span>...</span></li></ol>
+
+              
+              <ol start='59' class="post-context" id="post2230">
+                
+                <li onclick="toggle('pre2230', 'post2230')">  request = nil
+</li>
+                
+                <li onclick="toggle('pre2230', 'post2230')">  [&#x27;Location&#x27;, &#x27;Content-Location&#x27;].each do
+</li>
+                
+                <li onclick="toggle('pre2230', 'post2230')">    |header|
+</li>
+                
+                <li onclick="toggle('pre2230', 'post2230')">    if  ( location = res[1][header] ) and
+</li>
+                
+                <li onclick="toggle('pre2230', 'post2230')">        &#x27;&#x2F;&#x27; == location[0,1]
+</li>
+                
+                <li onclick="toggle('pre2230', 'post2230')">      request ||= Rack::Request.new env
+</li>
+                
+                <li onclick="toggle('pre2230', 'post2230')">      res[1][header] = request.base_url + location
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;rack-1.5.2&#x2F;lib&#x2F;rack&#x2F;config.rb</code>: in <code>call</code>
+
+          
+          <div class="context" id="c2232">
+              
+              <ol start="10" class="pre-context" id="pre2232">
+                
+                <li onclick="toggle('pre2232', 'post2232')">    def initialize(app, &amp;block)
+</li>
+                
+                <li onclick="toggle('pre2232', 'post2232')">      @app = app
+</li>
+                
+                <li onclick="toggle('pre2232', 'post2232')">      @block = block
+</li>
+                
+                <li onclick="toggle('pre2232', 'post2232')">    end
+</li>
+                
+                <li onclick="toggle('pre2232', 'post2232')">
+</li>
+                
+                <li onclick="toggle('pre2232', 'post2232')">    def call(env)
+</li>
+                
+                <li onclick="toggle('pre2232', 'post2232')">      @block.call(env)
+</li>
+                
+              </ol>
+              
+
+            <ol start="17" class="context-line">
+              <li onclick="toggle('pre2232', 'post2232')">      @app.call(env)<span>...</span></li></ol>
+
+              
+              <ol start='18' class="post-context" id="post2232">
+                
+                <li onclick="toggle('pre2232', 'post2232')">    end
+</li>
+                
+                <li onclick="toggle('pre2232', 'post2232')">  end
+</li>
+                
+                <li onclick="toggle('pre2232', 'post2232')">end
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;rack-1.5.2&#x2F;lib&#x2F;rack&#x2F;static.rb</code>: in <code>call</code>
+
+          
+          <div class="context" id="c2234">
+              
+              <ol start="112" class="pre-context" id="pre2234">
+                
+                <li onclick="toggle('pre2234', 'post2234')">
+</li>
+                
+                <li onclick="toggle('pre2234', 'post2234')">      if can_serve(path)
+</li>
+                
+                <li onclick="toggle('pre2234', 'post2234')">        env[&quot;PATH_INFO&quot;] = (path =~ &#x2F;\&#x2F;$&#x2F; ? path + @index : @urls[path]) if overwrite_file_path(path)
+</li>
+                
+                <li onclick="toggle('pre2234', 'post2234')">        @path = env[&quot;PATH_INFO&quot;]
+</li>
+                
+                <li onclick="toggle('pre2234', 'post2234')">        apply_header_rules
+</li>
+                
+                <li onclick="toggle('pre2234', 'post2234')">        @file_server.call(env)
+</li>
+                
+                <li onclick="toggle('pre2234', 'post2234')">      else
+</li>
+                
+              </ol>
+              
+
+            <ol start="119" class="context-line">
+              <li onclick="toggle('pre2234', 'post2234')">        @app.call(env)<span>...</span></li></ol>
+
+              
+              <ol start='120' class="post-context" id="post2234">
+                
+                <li onclick="toggle('pre2234', 'post2234')">      end
+</li>
+                
+                <li onclick="toggle('pre2234', 'post2234')">    end
+</li>
+                
+                <li onclick="toggle('pre2234', 'post2234')">
+</li>
+                
+                <li onclick="toggle('pre2234', 'post2234')">    # Convert HTTP header rules to HTTP headers
+</li>
+                
+                <li onclick="toggle('pre2234', 'post2234')">    def apply_header_rules
+</li>
+                
+                <li onclick="toggle('pre2234', 'post2234')">      @header_rules.each do |rule, headers|
+</li>
+                
+                <li onclick="toggle('pre2234', 'post2234')">        apply_rule(rule, headers)
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;rack-1.5.2&#x2F;lib&#x2F;rack&#x2F;sendfile.rb</code>: in <code>call</code>
+
+          
+          <div class="context" id="c2236">
+              
+              <ol start="105" class="pre-context" id="pre2236">
+                
+                <li onclick="toggle('pre2236', 'post2236')">      @variation = variation
+</li>
+                
+                <li onclick="toggle('pre2236', 'post2236')">      @mappings = mappings.map do |internal, external|
+</li>
+                
+                <li onclick="toggle('pre2236', 'post2236')">        [&#x2F;^#{internal}&#x2F;i, external]
+</li>
+                
+                <li onclick="toggle('pre2236', 'post2236')">      end
+</li>
+                
+                <li onclick="toggle('pre2236', 'post2236')">    end
+</li>
+                
+                <li onclick="toggle('pre2236', 'post2236')">
+</li>
+                
+                <li onclick="toggle('pre2236', 'post2236')">    def call(env)
+</li>
+                
+              </ol>
+              
+
+            <ol start="112" class="context-line">
+              <li onclick="toggle('pre2236', 'post2236')">      status, headers, body = @app.call(env)<span>...</span></li></ol>
+
+              
+              <ol start='113' class="post-context" id="post2236">
+                
+                <li onclick="toggle('pre2236', 'post2236')">      if body.respond_to?(:to_path)
+</li>
+                
+                <li onclick="toggle('pre2236', 'post2236')">        case type = variation(env)
+</li>
+                
+                <li onclick="toggle('pre2236', 'post2236')">        when &#x27;X-Accel-Redirect&#x27;
+</li>
+                
+                <li onclick="toggle('pre2236', 'post2236')">          path = F.expand_path(body.to_path)
+</li>
+                
+                <li onclick="toggle('pre2236', 'post2236')">          if url = map_accel_path(env, path)
+</li>
+                
+                <li onclick="toggle('pre2236', 'post2236')">            headers[&#x27;Content-Length&#x27;] = &#x27;0&#x27;
+</li>
+                
+                <li onclick="toggle('pre2236', 'post2236')">            headers[type] = url
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;mizuno-0.6.6&#x2F;lib&#x2F;mizuno&#x2F;rack&#x2F;chunked.rb</code>: in <code>call</code>
+
+          
+          <div class="context" id="c2238">
+              
+              <ol start="25" class="pre-context" id="pre2238">
+                
+                <li onclick="toggle('pre2238', 'post2238')">        end
+</li>
+                
+                <li onclick="toggle('pre2238', 'post2238')">
+</li>
+                
+                <li onclick="toggle('pre2238', 'post2238')">        def initialize(app)
+</li>
+                
+                <li onclick="toggle('pre2238', 'post2238')">            @app = app
+</li>
+                
+                <li onclick="toggle('pre2238', 'post2238')">        end
+</li>
+                
+                <li onclick="toggle('pre2238', 'post2238')">
+</li>
+                
+                <li onclick="toggle('pre2238', 'post2238')">        def call(env)
+</li>
+                
+              </ol>
+              
+
+            <ol start="32" class="context-line">
+              <li onclick="toggle('pre2238', 'post2238')">            @app.call(env)<span>...</span></li></ol>
+
+              
+              <ol start='33' class="post-context" id="post2238">
+                
+                <li onclick="toggle('pre2238', 'post2238')">        end
+</li>
+                
+                <li onclick="toggle('pre2238', 'post2238')">    end
+</li>
+                
+                <li onclick="toggle('pre2238', 'post2238')">end
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;rack-1.5.2&#x2F;lib&#x2F;rack&#x2F;lint.rb</code>: in <code>_call</code>
+
+          
+          <div class="context" id="c2240">
+              
+              <ol start="42" class="pre-context" id="pre2240">
+                
+                <li onclick="toggle('pre2240', 'post2240')">      assert(&quot;No env given&quot;) { env }
+</li>
+                
+                <li onclick="toggle('pre2240', 'post2240')">      check_env env
+</li>
+                
+                <li onclick="toggle('pre2240', 'post2240')">
+</li>
+                
+                <li onclick="toggle('pre2240', 'post2240')">      env[&#x27;rack.input&#x27;] = InputWrapper.new(env[&#x27;rack.input&#x27;])
+</li>
+                
+                <li onclick="toggle('pre2240', 'post2240')">      env[&#x27;rack.errors&#x27;] = ErrorWrapper.new(env[&#x27;rack.errors&#x27;])
+</li>
+                
+                <li onclick="toggle('pre2240', 'post2240')">
+</li>
+                
+                <li onclick="toggle('pre2240', 'post2240')">      ## and returns an Array of exactly three values:
+</li>
+                
+              </ol>
+              
+
+            <ol start="49" class="context-line">
+              <li onclick="toggle('pre2240', 'post2240')">      status, headers, @body = @app.call(env)<span>...</span></li></ol>
+
+              
+              <ol start='50' class="post-context" id="post2240">
+                
+                <li onclick="toggle('pre2240', 'post2240')">      ## The *status*,
+</li>
+                
+                <li onclick="toggle('pre2240', 'post2240')">      check_status status
+</li>
+                
+                <li onclick="toggle('pre2240', 'post2240')">      ## the *headers*,
+</li>
+                
+                <li onclick="toggle('pre2240', 'post2240')">      check_headers headers
+</li>
+                
+                <li onclick="toggle('pre2240', 'post2240')">
+</li>
+                
+                <li onclick="toggle('pre2240', 'post2240')">      check_hijack_response headers, env
+</li>
+                
+                <li onclick="toggle('pre2240', 'post2240')">
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;rack-1.5.2&#x2F;lib&#x2F;rack&#x2F;lint.rb</code>: in <code>call</code>
+
+          
+          <div class="context" id="c2242">
+              
+              <ol start="30" class="pre-context" id="pre2242">
+                
+                <li onclick="toggle('pre2242', 'post2242')">    ## after to catch all mistakes.
+</li>
+                
+                <li onclick="toggle('pre2242', 'post2242')">
+</li>
+                
+                <li onclick="toggle('pre2242', 'post2242')">    ## = Rack applications
+</li>
+                
+                <li onclick="toggle('pre2242', 'post2242')">
+</li>
+                
+                <li onclick="toggle('pre2242', 'post2242')">    ## A Rack application is a Ruby object (not a class) that
+</li>
+                
+                <li onclick="toggle('pre2242', 'post2242')">    ## responds to +call+.
+</li>
+                
+                <li onclick="toggle('pre2242', 'post2242')">    def call(env=nil)
+</li>
+                
+              </ol>
+              
+
+            <ol start="37" class="context-line">
+              <li onclick="toggle('pre2242', 'post2242')">      dup._call(env)<span>...</span></li></ol>
+
+              
+              <ol start='38' class="post-context" id="post2242">
+                
+                <li onclick="toggle('pre2242', 'post2242')">    end
+</li>
+                
+                <li onclick="toggle('pre2242', 'post2242')">
+</li>
+                
+                <li onclick="toggle('pre2242', 'post2242')">    def _call(env)
+</li>
+                
+                <li onclick="toggle('pre2242', 'post2242')">      ## It takes exactly one argument, the *environment*
+</li>
+                
+                <li onclick="toggle('pre2242', 'post2242')">      assert(&quot;No env given&quot;) { env }
+</li>
+                
+                <li onclick="toggle('pre2242', 'post2242')">      check_env env
+</li>
+                
+                <li onclick="toggle('pre2242', 'post2242')">
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;rack-1.5.2&#x2F;lib&#x2F;rack&#x2F;showexceptions.rb</code>: in <code>call</code>
+
+          
+          <div class="context" id="c2244">
+              
+              <ol start="17" class="pre-context" id="pre2244">
+                
+                <li onclick="toggle('pre2244', 'post2244')">
+</li>
+                
+                <li onclick="toggle('pre2244', 'post2244')">    def initialize(app)
+</li>
+                
+                <li onclick="toggle('pre2244', 'post2244')">      @app = app
+</li>
+                
+                <li onclick="toggle('pre2244', 'post2244')">      @template = ERB.new(TEMPLATE)
+</li>
+                
+                <li onclick="toggle('pre2244', 'post2244')">    end
+</li>
+                
+                <li onclick="toggle('pre2244', 'post2244')">
+</li>
+                
+                <li onclick="toggle('pre2244', 'post2244')">    def call(env)
+</li>
+                
+              </ol>
+              
+
+            <ol start="24" class="context-line">
+              <li onclick="toggle('pre2244', 'post2244')">      @app.call(env)<span>...</span></li></ol>
+
+              
+              <ol start='25' class="post-context" id="post2244">
+                
+                <li onclick="toggle('pre2244', 'post2244')">    rescue StandardError, LoadError, SyntaxError =&gt; e
+</li>
+                
+                <li onclick="toggle('pre2244', 'post2244')">      exception_string = dump_exception(e)
+</li>
+                
+                <li onclick="toggle('pre2244', 'post2244')">
+</li>
+                
+                <li onclick="toggle('pre2244', 'post2244')">      env[&quot;rack.errors&quot;].puts(exception_string)
+</li>
+                
+                <li onclick="toggle('pre2244', 'post2244')">      env[&quot;rack.errors&quot;].flush
+</li>
+                
+                <li onclick="toggle('pre2244', 'post2244')">
+</li>
+                
+                <li onclick="toggle('pre2244', 'post2244')">      if prefers_plain_text?(env)
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;rack-1.5.2&#x2F;lib&#x2F;rack&#x2F;commonlogger.rb</code>: in <code>call</code>
+
+          
+          <div class="context" id="c2246">
+              
+              <ol start="26" class="pre-context" id="pre2246">
+                
+                <li onclick="toggle('pre2246', 'post2246')">    def initialize(app, logger=nil)
+</li>
+                
+                <li onclick="toggle('pre2246', 'post2246')">      @app = app
+</li>
+                
+                <li onclick="toggle('pre2246', 'post2246')">      @logger = logger
+</li>
+                
+                <li onclick="toggle('pre2246', 'post2246')">    end
+</li>
+                
+                <li onclick="toggle('pre2246', 'post2246')">
+</li>
+                
+                <li onclick="toggle('pre2246', 'post2246')">    def call(env)
+</li>
+                
+                <li onclick="toggle('pre2246', 'post2246')">      began_at = Time.now
+</li>
+                
+              </ol>
+              
+
+            <ol start="33" class="context-line">
+              <li onclick="toggle('pre2246', 'post2246')">      status, header, body = @app.call(env)<span>...</span></li></ol>
+
+              
+              <ol start='34' class="post-context" id="post2246">
+                
+                <li onclick="toggle('pre2246', 'post2246')">      header = Utils::HeaderHash.new(header)
+</li>
+                
+                <li onclick="toggle('pre2246', 'post2246')">      body = BodyProxy.new(body) { log(env, status, header, began_at) }
+</li>
+                
+                <li onclick="toggle('pre2246', 'post2246')">      [status, header, body]
+</li>
+                
+                <li onclick="toggle('pre2246', 'post2246')">    end
+</li>
+                
+                <li onclick="toggle('pre2246', 'post2246')">
+</li>
+                
+                <li onclick="toggle('pre2246', 'post2246')">    private
+</li>
+                
+                <li onclick="toggle('pre2246', 'post2246')">
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;mizuno-0.6.6&#x2F;lib&#x2F;mizuno&#x2F;rack&#x2F;chunked.rb</code>: in <code>call</code>
+
+          
+          <div class="context" id="c2248">
+              
+              <ol start="25" class="pre-context" id="pre2248">
+                
+                <li onclick="toggle('pre2248', 'post2248')">        end
+</li>
+                
+                <li onclick="toggle('pre2248', 'post2248')">
+</li>
+                
+                <li onclick="toggle('pre2248', 'post2248')">        def initialize(app)
+</li>
+                
+                <li onclick="toggle('pre2248', 'post2248')">            @app = app
+</li>
+                
+                <li onclick="toggle('pre2248', 'post2248')">        end
+</li>
+                
+                <li onclick="toggle('pre2248', 'post2248')">
+</li>
+                
+                <li onclick="toggle('pre2248', 'post2248')">        def call(env)
+</li>
+                
+              </ol>
+              
+
+            <ol start="32" class="context-line">
+              <li onclick="toggle('pre2248', 'post2248')">            @app.call(env)<span>...</span></li></ol>
+
+              
+              <ol start='33' class="post-context" id="post2248">
+                
+                <li onclick="toggle('pre2248', 'post2248')">        end
+</li>
+                
+                <li onclick="toggle('pre2248', 'post2248')">    end
+</li>
+                
+                <li onclick="toggle('pre2248', 'post2248')">end
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;rack-1.5.2&#x2F;lib&#x2F;rack&#x2F;content_length.rb</code>: in <code>call</code>
+
+          
+          <div class="context" id="c2250">
+              
+              <ol start="7" class="pre-context" id="pre2250">
+                
+                <li onclick="toggle('pre2250', 'post2250')">    include Rack::Utils
+</li>
+                
+                <li onclick="toggle('pre2250', 'post2250')">
+</li>
+                
+                <li onclick="toggle('pre2250', 'post2250')">    def initialize(app)
+</li>
+                
+                <li onclick="toggle('pre2250', 'post2250')">      @app = app
+</li>
+                
+                <li onclick="toggle('pre2250', 'post2250')">    end
+</li>
+                
+                <li onclick="toggle('pre2250', 'post2250')">
+</li>
+                
+                <li onclick="toggle('pre2250', 'post2250')">    def call(env)
+</li>
+                
+              </ol>
+              
+
+            <ol start="14" class="context-line">
+              <li onclick="toggle('pre2250', 'post2250')">      status, headers, body = @app.call(env)<span>...</span></li></ol>
+
+              
+              <ol start='15' class="post-context" id="post2250">
+                
+                <li onclick="toggle('pre2250', 'post2250')">      headers = HeaderHash.new(headers)
+</li>
+                
+                <li onclick="toggle('pre2250', 'post2250')">
+</li>
+                
+                <li onclick="toggle('pre2250', 'post2250')">      if !STATUS_WITH_NO_ENTITY_BODY.include?(status.to_i) &amp;&amp;
+</li>
+                
+                <li onclick="toggle('pre2250', 'post2250')">         !headers[&#x27;Content-Length&#x27;] &amp;&amp;
+</li>
+                
+                <li onclick="toggle('pre2250', 'post2250')">         !headers[&#x27;Transfer-Encoding&#x27;] &amp;&amp;
+</li>
+                
+                <li onclick="toggle('pre2250', 'post2250')">         body.respond_to?(:to_ary)
+</li>
+                
+                <li onclick="toggle('pre2250', 'post2250')">
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;mizuno-0.6.6&#x2F;lib&#x2F;mizuno&#x2F;rack_handler.rb</code>: in <code>handle</code>
+
+          
+          <div class="context" id="c2252">
+              
+              <ol start="73" class="pre-context" id="pre2252">
+                
+                <li onclick="toggle('pre2252', 'post2252')">                    servlet_response = continuation.getServletResponse
+</li>
+                
+                <li onclick="toggle('pre2252', 'post2252')">                    rack_to_servlet(rack_response, servlet_response) \
+</li>
+                
+                <li onclick="toggle('pre2252', 'post2252')">                        and continuation.complete
+</li>
+                
+                <li onclick="toggle('pre2252', 'post2252')">                end
+</li>
+                
+                <li onclick="toggle('pre2252', 'post2252')">
+</li>
+                
+                <li onclick="toggle('pre2252', 'post2252')">                # Execute the Rack request.
+</li>
+                
+                <li onclick="toggle('pre2252', 'post2252')">                catch(:async) do
+</li>
+                
+              </ol>
+              
+
+            <ol start="80" class="context-line">
+              <li onclick="toggle('pre2252', 'post2252')">                    rack_response = @app.call(env)<span>...</span></li></ol>
+
+              
+              <ol start='81' class="post-context" id="post2252">
+                
+                <li onclick="toggle('pre2252', 'post2252')">                   
+</li>
+                
+                <li onclick="toggle('pre2252', 'post2252')">                    # For apps that don&#x27;t throw :async.
+</li>
+                
+                <li onclick="toggle('pre2252', 'post2252')">                    unless(rack_response[0] == -1)
+</li>
+                
+                <li onclick="toggle('pre2252', 'post2252')">                        # Nope, nothing asynchronous here.
+</li>
+                
+                <li onclick="toggle('pre2252', 'post2252')">                        rack_to_servlet(rack_response, response)
+</li>
+                
+                <li onclick="toggle('pre2252', 'post2252')">                        return
+</li>
+                
+                <li onclick="toggle('pre2252', 'post2252')">                    end
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>org&#x2F;jruby&#x2F;RubyKernel.java</code>: in <code>catch</code>
+
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;mizuno-0.6.6&#x2F;lib&#x2F;mizuno&#x2F;rack_handler.rb</code>: in <code>handle</code>
+
+          
+          <div class="context" id="c2254">
+              
+              <ol start="72" class="pre-context" id="pre2254">
+                
+                <li onclick="toggle('pre2254', 'post2254')">                env[&#x27;async.callback&#x27;] = Proc.new do |rack_response|
+</li>
+                
+                <li onclick="toggle('pre2254', 'post2254')">                    servlet_response = continuation.getServletResponse
+</li>
+                
+                <li onclick="toggle('pre2254', 'post2254')">                    rack_to_servlet(rack_response, servlet_response) \
+</li>
+                
+                <li onclick="toggle('pre2254', 'post2254')">                        and continuation.complete
+</li>
+                
+                <li onclick="toggle('pre2254', 'post2254')">                end
+</li>
+                
+                <li onclick="toggle('pre2254', 'post2254')">
+</li>
+                
+                <li onclick="toggle('pre2254', 'post2254')">                # Execute the Rack request.
+</li>
+                
+              </ol>
+              
+
+            <ol start="79" class="context-line">
+              <li onclick="toggle('pre2254', 'post2254')">                catch(:async) do<span>...</span></li></ol>
+
+              
+              <ol start='80' class="post-context" id="post2254">
+                
+                <li onclick="toggle('pre2254', 'post2254')">                    rack_response = @app.call(env)
+</li>
+                
+                <li onclick="toggle('pre2254', 'post2254')">                   
+</li>
+                
+                <li onclick="toggle('pre2254', 'post2254')">                    # For apps that don&#x27;t throw :async.
+</li>
+                
+                <li onclick="toggle('pre2254', 'post2254')">                    unless(rack_response[0] == -1)
+</li>
+                
+                <li onclick="toggle('pre2254', 'post2254')">                        # Nope, nothing asynchronous here.
+</li>
+                
+                <li onclick="toggle('pre2254', 'post2254')">                        rack_to_servlet(rack_response, response)
+</li>
+                
+                <li onclick="toggle('pre2254', 'post2254')">                        return
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;mizuno-0.6.6&#x2F;lib&#x2F;mizuno&#x2F;rack_handler.rb</code>: in <code>handle_exceptions</code>
+
+          
+          <div class="context" id="c2256">
+              
+              <ol start="239" class="pre-context" id="pre2256">
+                
+                <li onclick="toggle('pre2256', 'post2256')">        end
+</li>
+                
+                <li onclick="toggle('pre2256', 'post2256')">
+</li>
+                
+                <li onclick="toggle('pre2256', 'post2256')">        #
+</li>
+                
+                <li onclick="toggle('pre2256', 'post2256')">        # Handle exceptions, returning a generic 500 error response.
+</li>
+                
+                <li onclick="toggle('pre2256', 'post2256')">        #
+</li>
+                
+                <li onclick="toggle('pre2256', 'post2256')">        def handle_exceptions(response)
+</li>
+                
+                <li onclick="toggle('pre2256', 'post2256')">            begin
+</li>
+                
+              </ol>
+              
+
+            <ol start="246" class="context-line">
+              <li onclick="toggle('pre2256', 'post2256')">                yield<span>...</span></li></ol>
+
+              
+              <ol start='247' class="post-context" id="post2256">
+                
+                <li onclick="toggle('pre2256', 'post2256')">            rescue =&gt; error
+</li>
+                
+                <li onclick="toggle('pre2256', 'post2256')">                message = &quot;Exception: #{error}&quot;
+</li>
+                
+                <li onclick="toggle('pre2256', 'post2256')">                message &lt;&lt; &quot;\n#{error.backtrace.join(&quot;\n&quot;)}&quot; \
+</li>
+                
+                <li onclick="toggle('pre2256', 'post2256')">                    if (error.respond_to?(:backtrace))
+</li>
+                
+                <li onclick="toggle('pre2256', 'post2256')">                Server.logger.error(message)
+</li>
+                
+                <li onclick="toggle('pre2256', 'post2256')">                return if response.isCommitted
+</li>
+                
+                <li onclick="toggle('pre2256', 'post2256')">                response.reset
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+      <li class="frame">
+        <code>&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;mizuno-0.6.6&#x2F;lib&#x2F;mizuno&#x2F;rack_handler.rb</code>: in <code>handle</code>
+
+          
+          <div class="context" id="c2258">
+              
+              <ol start="43" class="pre-context" id="pre2258">
+                
+                <li onclick="toggle('pre2258', 'post2258')">        # parameter in env to the Rack application.  If we catch an
+</li>
+                
+                <li onclick="toggle('pre2258', 'post2258')">        # :async symbol thrown by the app, we initiate a Jetty continuation.
+</li>
+                
+                <li onclick="toggle('pre2258', 'post2258')">        #
+</li>
+                
+                <li onclick="toggle('pre2258', 'post2258')">        # When &#x27;async.callback&#x27; gets a response with empty headers and an
+</li>
+                
+                <li onclick="toggle('pre2258', 'post2258')">        # empty body, we declare the async response finished.
+</li>
+                
+                <li onclick="toggle('pre2258', 'post2258')">        #
+</li>
+                
+                <li onclick="toggle('pre2258', 'post2258')">        def handle(target, base_request, request, response)
+</li>
+                
+              </ol>
+              
+
+            <ol start="50" class="context-line">
+              <li onclick="toggle('pre2258', 'post2258')">            handle_exceptions(response) do<span>...</span></li></ol>
+
+              
+              <ol start='51' class="post-context" id="post2258">
+                
+                <li onclick="toggle('pre2258', 'post2258')">                # Turn the ServletRequest into a Rack env hash
+</li>
+                
+                <li onclick="toggle('pre2258', 'post2258')">                env = servlet_to_rack(request)
+</li>
+                
+                <li onclick="toggle('pre2258', 'post2258')">
+</li>
+                
+                <li onclick="toggle('pre2258', 'post2258')">                # Handle asynchronous responses via Servlet continuations.
+</li>
+                
+                <li onclick="toggle('pre2258', 'post2258')">                continuation = ContinuationSupport.getContinuation(request)
+</li>
+                
+                <li onclick="toggle('pre2258', 'post2258')">
+</li>
+                
+                <li onclick="toggle('pre2258', 'post2258')">                # If this is an expired connection, do nothing.
+</li>
+                
+              </ol>
+              
+          </div>
+          
+      </li>
+
+  </ul>
+</div>
+
+<div id="requestinfo">
+  <h2>Request information</h2>
+
+  <h3 id="get-info">GET</h3>
+  
+    <table class="req">
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+          
+          <tr>
+            <td>prefix</td>
+            <td class="code"><div>&quot;GRNET&quot;</div></td>
+          </tr>
+          
+          <tr>
+            <td>suffix</td>
+            <td class="code"><div>&quot;123&quot;</div></td>
+          </tr>
+          
+      </tbody>
+    </table>
+  
+
+  <h3 id="post-info">POST</h3>
+  
+    <p>No POST data.</p>
+  
+
+
+  <h3 id="cookie-info">COOKIES</h3>
+  
+    <p>No cookie data.</p>
+  
+
+  <h3 id="env-info">Rack ENV</h3>
+    <table class="req">
+      <thead>
+        <tr>
+          <th>Variable</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+          
+          <tr>
+            <td>CONTENT_LENGTH</td>
+            <td class="code"><div>66</div></td>
+          </tr>
+          
+          <tr>
+            <td>CONTENT_TYPE</td>
+            <td class="code"><div>application&#x2F;json</div></td>
+          </tr>
+          
+          <tr>
+            <td>HTTP_ACCEPT</td>
+            <td class="code"><div>application&#x2F;json</div></td>
+          </tr>
+          
+          <tr>
+            <td>HTTP_AUTHORIZATION</td>
+            <td class="code"><div>Basic c2thbmN0OmxhbGExMjM=</div></td>
+          </tr>
+          
+          <tr>
+            <td>HTTP_CONNECTION</td>
+            <td class="code"><div>keep-alive</div></td>
+          </tr>
+          
+          <tr>
+            <td>HTTP_HOST</td>
+            <td class="code"><div>epic.grnet.gr:9003</div></td>
+          </tr>
+          
+          <tr>
+            <td>HTTP_USER_AGENT</td>
+            <td class="code"><div>curl&#x2F;7.30.0</div></td>
+          </tr>
+          
+          <tr>
+            <td>HTTP_VERSION</td>
+            <td class="code"><div>HTTP&#x2F;1.1</div></td>
+          </tr>
+          
+          <tr>
+            <td>HTTP_X_FORWARDED_FOR</td>
+            <td class="code"><div>2001:648:2320:61:cc85:9ac7:839b:8145</div></td>
+          </tr>
+          
+          <tr>
+            <td>HTTP_X_FORWARDED_HOST</td>
+            <td class="code"><div>epic.grnet.gr</div></td>
+          </tr>
+          
+          <tr>
+            <td>HTTP_X_FORWARDED_SERVER</td>
+            <td class="code"><div>epic.grnet.gr</div></td>
+          </tr>
+          
+          <tr>
+            <td>HTTP_X_FORWARDED_SSL</td>
+            <td class="code"><div>on</div></td>
+          </tr>
+          
+          <tr>
+            <td>PATH_INFO</td>
+            <td class="code"><div>&#x2F;handles&#x2F;11239&#x2F;</div></td>
+          </tr>
+          
+          <tr>
+            <td>QUERY_STRING</td>
+            <td class="code"><div>prefix=GRNET&amp;suffix=123</div></td>
+          </tr>
+          
+          <tr>
+            <td>REMOTE_ADDR</td>
+            <td class="code"><div>2001:648:2ffc:121:dcdb:eeff:fed6:ba9e</div></td>
+          </tr>
+          
+          <tr>
+            <td>REMOTE_HOST</td>
+            <td class="code"><div>2001:648:2ffc:121:dcdb:eeff:fed6:ba9e</div></td>
+          </tr>
+          
+          <tr>
+            <td>REMOTE_USER</td>
+            <td class="code"><div>skanct</div></td>
+          </tr>
+          
+          <tr>
+            <td>REQUEST_METHOD</td>
+            <td class="code"><div>POST</div></td>
+          </tr>
+          
+          <tr>
+            <td>REQUEST_PATH</td>
+            <td class="code"><div>&#x2F;handles&#x2F;11239&#x2F;</div></td>
+          </tr>
+          
+          <tr>
+            <td>REQUEST_URI</td>
+            <td class="code"><div>http:&#x2F;&#x2F;epic.grnet.gr:9003&#x2F;handles&#x2F;11239&#x2F;?prefix=GRNET&amp;suffix=123</div></td>
+          </tr>
+          
+          <tr>
+            <td>SCRIPT_NAME</td>
+            <td class="code"><div></div></td>
+          </tr>
+          
+          <tr>
+            <td>SERVER_NAME</td>
+            <td class="code"><div>epic.grnet.gr</div></td>
+          </tr>
+          
+          <tr>
+            <td>SERVER_PORT</td>
+            <td class="code"><div>9003</div></td>
+          </tr>
+          
+          <tr>
+            <td>SERVER_PROTOCOL</td>
+            <td class="code"><div>HTTP&#x2F;1.1</div></td>
+          </tr>
+          
+          <tr>
+            <td>async.callback</td>
+            <td class="code"><div>#&lt;Proc:0x44993271@&#x2F;home&#x2F;epic&#x2F;.rvm&#x2F;gems&#x2F;jruby-1.6.7.2@epic_devel&#x2F;gems&#x2F;mizuno-0.6.6&#x2F;lib&#x2F;mizuno&#x2F;rack_handler.rb:72&gt;</div></td>
+          </tr>
+          
+          <tr>
+            <td>:epic_resource_cache</td>
+            <td class="code"><div>{&quot;&#x2F;handles&#x2F;11239&quot;=&gt;#&lt;EPIC::Handles:0x78fabb77&gt;, &quot;&#x2F;generators&#x2F;grnetpid&quot;=&gt;#&lt;EPIC::Generator::GRNETPID:0x1529bfae @rackful_resource_path=&quot;&#x2F;generators&#x2F;grnetpid&quot;&gt;}</div></td>
+          </tr>
+          
+          <tr>
+            <td>rack.errors</td>
+            <td class="code"><div>#&lt;Rack::Lint::ErrorWrapper:0x67e7435c @error=#&lt;Mizuno::Logger:0x5c144c9c @log4j=#&lt;Java::OrgApacheLog4j::Logger:0x7b5e6d39&gt;&gt;&gt;</div></td>
+          </tr>
+          
+          <tr>
+            <td>rack.input</td>
+            <td class="code"><div>#&lt;Rack::Lint::InputWrapper:0x7ff7824e @input=#&lt;IO:fd 1430&gt;&gt;</div></td>
+          </tr>
+          
+          <tr>
+            <td>rack.java.servlet</td>
+            <td class="code"><div>true</div></td>
+          </tr>
+          
+          <tr>
+            <td>rack.java.servlet.continuation</td>
+            <td class="code"><div>#&lt;Java::OrgEclipseJettyServer::AsyncContinuation:0xa86ec90&gt;</div></td>
+          </tr>
+          
+          <tr>
+            <td>rack.java.servlet.request</td>
+            <td class="code"><div>#&lt;Java::OrgEclipseJettyServer::Request:0x36f759cc&gt;</div></td>
+          </tr>
+          
+          <tr>
+            <td>rack.java.servlet.response</td>
+            <td class="code"><div>#&lt;Java::OrgEclipseJettyServer::Response:0x6aa9e111&gt;</div></td>
+          </tr>
+          
+          <tr>
+            <td>rack.logger</td>
+            <td class="code"><div>#&lt;Mizuno::Logger:0x5c144c9c @log4j=#&lt;Java::OrgApacheLog4j::Logger:0x7b5e6d39&gt;&gt;</div></td>
+          </tr>
+          
+          <tr>
+            <td>rack.multiprocess</td>
+            <td class="code"><div>false</div></td>
+          </tr>
+          
+          <tr>
+            <td>rack.multithread</td>
+            <td class="code"><div>true</div></td>
+          </tr>
+          
+          <tr>
+            <td>rack.request.cookie_hash</td>
+            <td class="code"><div>{}</div></td>
+          </tr>
+          
+          <tr>
+            <td>rack.request.query_hash</td>
+            <td class="code"><div>{&quot;prefix&quot;=&gt;&quot;GRNET&quot;, &quot;suffix&quot;=&gt;&quot;123&quot;}</div></td>
+          </tr>
+          
+          <tr>
+            <td>rack.request.query_string</td>
+            <td class="code"><div>prefix=GRNET&amp;suffix=123</div></td>
+          </tr>
+          
+          <tr>
+            <td>rack.run_once</td>
+            <td class="code"><div>false</div></td>
+          </tr>
+          
+          <tr>
+            <td>rack.url_scheme</td>
+            <td class="code"><div>http</div></td>
+          </tr>
+          
+          <tr>
+            <td>rack.version</td>
+            <td class="code"><div>[1, 2]</div></td>
+          </tr>
+          
+          <tr>
+            <td>rackful.resource_factory</td>
+            <td class="code"><div>#&lt;EPIC::ResourceFactory:0x3eef9c79&gt;</div></td>
+          </tr>
+          
+      </tbody>
+    </table>
+
+</div>
+
+<div id="explanation">
+  <p>
+    You're seeing this error because you use <code>Rack::ShowExceptions</code>.
+  </p>
+</div>
+
+</body>
+</html>

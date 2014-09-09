@@ -1,0 +1,31 @@
+### The request in php 
+
+<pre><code class="language-php5"><span class="nv">$PIDSERVICE_URL</span><span class="o">=</span><span class="s2">"THE_SERVICE_URL_WITH_PREFIX"</span><span class="p">;</span>
+<span class="nv">$PIDSERVICE_USER</span><span class="o">=</span><span class="s2">"YOURUSERNAME"</span><span class="p">;</span>
+<span class="nv">$PIDSERVICE_PASSWD</span><span class="o">=</span><span class="s2">"YOURPASSWORD"</span><span class="p">;</span>
+<span class="nv">$SEARCHTERM</span> <span class="o">=</span> <span class="s2">"grnet"</span><span class="p">;</span>
+<span class="nv">$GETPIDURL</span> <span class="o">=</span><span class="nv">$PIDSERVICE_URL</span><span class="o">.</span><span class="s2">"?URL=*"</span><span class="o">.</span><span class="nv">$SEARCHTERM</span><span class="o">.</span><span class="s2">"*"</span><span class="p">;</span>
+
+<span class="c1">// Get cURL resource</span>
+<span class="nv">$curl</span> <span class="o">=</span> <span class="nb">curl_init</span><span class="p">();</span>
+<span class="c1">// Set some options - we are passing in a useragent too here</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span><span class="nx">CURLOPT_URL</span><span class="p">,</span><span class="nv">$GETPIDURL</span><span class="p">);</span>
+<span class="c1">// Set the authentication options</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_USERPWD</span><span class="p">,</span> <span class="nv">$PIDSERVICE_USER</span><span class="o">.</span><span class="s2">":"</span><span class="o">.</span><span class="nv">$PIDSERVICE_PASSWD</span><span class="p">);</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_HTTPAUTH</span><span class="p">,</span> <span class="nx">CURLAUTH_BASIC</span><span class="p">);</span>
+
+<span class="c1">// Include header in result? (0 = yes, 1 = no)</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_HEADER</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="c1">// Should cURL return or print out the data? (true = return, false = print)</span>
+<span class="nb">curl_setopt</span><span class="p">(</span><span class="nv">$curl</span><span class="p">,</span> <span class="nx">CURLOPT_RETURNTRANSFER</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+
+<span class="c1">// Download the given URL, and return output</span>
+<span class="nv">$output</span> <span class="o">=</span> <span class="nb">curl_exec</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+
+<span class="nv">$info</span> <span class="o">=</span> <span class="nb">curl_getinfo</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span> <span class="nv">$info</span><span class="p">[</span><span class="s1">'http_code'</span><span class="p">]</span><span class="o">==</span><span class="mi">200</span><span class="p">)</span> <span class="k">echo</span> <span class="s2">"PID DATA"</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span> <span class="nv">$info</span><span class="p">[</span><span class="s1">'http_code'</span><span class="p">]</span><span class="o">==</span><span class="mi">401</span><span class="p">)</span> <span class="k">echo</span> <span class="s2">"Authorization problem"</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span> <span class="nv">$info</span><span class="p">[</span><span class="s1">'http_code'</span><span class="p">]</span><span class="o">==</span><span class="mi">404</span><span class="p">)</span> <span class="k">echo</span> <span class="s2">"Not found"</span><span class="p">;</span>
+
+<span class="c1">// Close the cURL resource, and free system resources</span>
+<span class="nb">curl_close</span><span class="p">(</span><span class="nv">$curl</span><span class="p">);</span></code></pre>

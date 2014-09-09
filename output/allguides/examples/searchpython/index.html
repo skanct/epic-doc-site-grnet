@@ -1,0 +1,40 @@
+The request in python
+
+<pre><code class="language-python"><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">PIDSERVICE_URL</span><span class="o">=</span><span class="s">"THE_SERVICE_URL_WITH_PREFIX"</span>
+<span class="n">PIDSERVICE_USER</span><span class="o">=</span><span class="s">"YOURUSERNAME"</span>
+<span class="n">PIDSERVICE_PASSWD</span><span class="o">=</span><span class="s">"YOURPASSWORD"</span>
+<span class="n">URL_TO_OPEN</span><span class="o">=</span><span class="n">PIDSERVICE_URL</span><span class="o">+</span><span class="s">"?URL=*grnet*"</span>
+<span class="n">DATAURL</span><span class="o">=</span><span class="s">""</span>
+
+<span class="c"># create a password manager</span>
+<span class="n">password_mgr</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPPasswordMgrWithDefaultRealm</span><span class="p">()</span>
+
+<span class="c"># Add the username and password.</span>
+<span class="n">password_mgr</span><span class="o">.</span><span class="n">add_password</span><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="n">PIDSERVICE_URL</span><span class="p">,</span> <span class="n">PIDSERVICE_USER</span><span class="p">,</span> <span class="n">PIDSERVICE_PASSWD</span><span class="p">)</span>
+
+<span class="n">handler</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPBasicAuthHandler</span><span class="p">(</span><span class="n">password_mgr</span><span class="p">)</span>
+
+<span class="c"># create "opener" (OpenerDirector instance)</span>
+<span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">handler</span><span class="p">)</span>
+
+<span class="c"># use the opener to fetch a URL</span>
+<span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">PIDSERVICE_URL</span><span class="p">)</span>
+
+<span class="c"># Install the opener.</span>
+<span class="c"># Now all calls to urllib2.urlopen use the created opener.</span>
+<span class="n">urllib2</span><span class="o">.</span><span class="n">install_opener</span><span class="p">(</span><span class="n">opener</span><span class="p">)</span>
+
+<span class="n">REQUESTDATA</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">URL_TO_OPEN</span><span class="p">)</span>    
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">DATAURL</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">REQUESTDATA</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">URLError</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">code</span> <span class="o">==</span> <span class="mi">404</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">"404-Not found"</span>
+    <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">code</span> <span class="o">==</span> <span class="mi">401</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">"401-Authentication failed"</span>    
+
+<span class="k">if</span> <span class="n">DATAURL</span><span class="p">:</span>
+    <span class="c"># Getting the code</span>
+    <span class="k">print</span> <span class="s">"This gets the code: "</span><span class="p">,</span> <span class="n">DATAURL</span><span class="o">.</span><span class="n">code</span></code></pre>

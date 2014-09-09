@@ -1,0 +1,24 @@
+The request in python
+
+<pre><code class="language-perl"><span class="c1"># Main subroutine</span>
+<span class="k">sub </span><span class="nf">main</span> <span class="p">{</span>
+
+	<span class="c1">#Get the subroutine arguments</span>
+	<span class="k">my</span> <span class="nv">$settings_ref</span> <span class="o">=</span> <span class="nb">shift</span><span class="p">;</span>
+
+	<span class="c1"># Get the script arguments</span>
+	<span class="p">(</span><span class="k">my</span> <span class="nv">$returncode</span><span class="p">)</span> <span class="o">=</span> <span class="n">get_arguments</span><span class="p">(</span><span class="nv">$settings_ref</span><span class="p">);</span>
+
+	<span class="k">if</span><span class="p">(</span> <span class="nv">$returncode</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+
+		<span class="c1"># perform specified action</span>
+		<span class="n">given</span> <span class="p">(</span><span class="nv">$settings_ref</span><span class="o">-&gt;</span><span class="p">{</span><span class="n">handle</span><span class="p">}</span><span class="o">-&gt;</span><span class="p">{</span><span class="n">action</span><span class="p">})</span> <span class="p">{</span>
+			<span class="n">when</span><span class="p">(</span><span class="s">'get'</span><span class="p">)</span>		<span class="p">{</span> <span class="n">performGet</span><span class="p">(</span><span class="nv">$settings_ref</span><span class="p">);</span> <span class="p">}</span>
+			<span class="n">when</span><span class="p">(</span><span class="s">'put'</span><span class="p">)</span>		<span class="p">{</span> <span class="n">performPut</span><span class="p">(</span><span class="nv">$settings_ref</span><span class="p">);</span> <span class="p">}</span>
+			<span class="n">when</span><span class="p">(</span><span class="s">'delete'</span><span class="p">)</span>	<span class="p">{</span> <span class="n">performDelete</span><span class="p">(</span><span class="nv">$settings_ref</span><span class="p">);</span> <span class="p">}</span>
+			<span class="n">when</span><span class="p">(</span><span class="s">'post'</span><span class="p">)</span>	<span class="p">{</span> <span class="n">performPost</span><span class="p">(</span><span class="nv">$settings_ref</span><span class="p">);</span> <span class="p">}</span>
+		<span class="p">}</span>
+
+	<span class="p">}</span>
+	<span class="k">return</span><span class="p">(</span><span class="nv">$returncode</span><span class="p">);</span>
+<span class="p">}</span></code></pre>
